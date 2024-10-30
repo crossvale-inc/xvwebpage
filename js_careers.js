@@ -157,7 +157,7 @@ window.loadLeverJobs = function (options) {
 
       head.appendChild(link);
     }
-    addCss('https://github.com/crossvale-inc/xvwebpage/blob/main/careers.css');
+    addCss('https://andreasmb.github.io/lever-jobs-embed/embed-css/style.css');
   }
 
   var request = new XMLHttpRequest();
