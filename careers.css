@@ -1,75 +1,69 @@
-#lever-jobs-container {
-  display: block;
-  visibility: visible;
-  opacity: 1;
-  font-family: 'Montserrat', sans-serif;
-  color: #2c2e2f;
-  font-size: 26px;
+/* Estilo general para el acordeón */
+.accordion {
+    border: 2px solid #F50000; /* Border color */
+    color: #2D2D2D; /* Title text color */
+    cursor: pointer;
+    padding: 15px; /* Padding for the button */
+    text-align: left;
+    outline: none;
+    font-size: 16px; /* Increased font size */
+    font-family: 'Montserrat', sans-serif; /* Montserrat font */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition for hover */
+    width: 100%;
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin-bottom: 10px; /* Space between buttons */
 }
-#lever-jobs-container ul,
-#lever-jobs-container li,
-#lever-jobs-container h1,
-#lever-jobs-container h2,
-#lever-jobs-container h3,
-#lever-jobs-container h4,
-#lever-jobs-container h5,
-#lever-jobs-container h6,
-#lever-jobs-container p,
-#lever-jobs-container span {
-  margin: 0;
-  padding: 0;
+
+/* Hover and active state for the accordion button */
+.accordion.active, .accordion:hover {
+    background-color: rgba(245, 0, 0, 0.1); /* Background color on hover */
+    transform: scale(1.02); /* Slight scaling effect on hover */
 }
-#lever-jobs-container * {
-  box-sizing: border-box;
+
+/* Estilo para el panel del acordeón */
+.panel {
+    padding: 10px 15px; /* Padding for the content */
+    display: none;
+    overflow: hidden;
+    border-radius: 8px; /* Match button radius */
+    color: #2D2D2D; /* Content text color */
+    font-family: 'Montserrat', sans-serif; /* Montserrat font */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Transition for opening/closing */
+    max-height: 0; /* Initially closed */
+    opacity: 0; /* Initially hidden */
 }
-#lever-jobs-container ul {
-  list-style-type: none;
+
+/* Show the panel */
+.panel.show {
+    display: block; /* Show the panel */
+    max-height: 500px; /* Max height when opened */
+    opacity: 1; /* Fade in effect */
 }
-#lever-jobs-container li.lever-job {
-  text-align: left;
-  display: flex;
-  text-decoration: none;
-  padding: 0.2em 0;
-  background: none;
+
+/* Espaciado entre los elementos dentro del panel */
+.panel div {
+    margin-bottom: 15px; /* Space between job listings */
 }
-#lever-jobs-container .lever-team {
-  margin-bottom: 1.5em;
+
+/* Estilo para el título de cada trabajo */
+.lever-job-title {
+    font-size: 1.2em; /* Increase font size */
+    color: #0c92f3; /* Link color */
+    text-decoration: underline; /* Underline for titles */
+    margin-bottom: 5px; /* Space below titles */
 }
-#lever-jobs-container .lever-department {
-  margin-bottom: 3em;
+
+/* Efecto hover para los títulos de trabajos */
+.lever-job-title:hover {
+    color: #0068b3; /* Darker blue on hover */
 }
-#lever-jobs-container .lever-team-title {
-  font-size: 1.25em;
-  margin-bottom: 0.5em;
-}
-#lever-jobs-container .lever-department-title {
-  font-size: 1.5em;
-  margin-bottom: 1em;
-}
-#lever-jobs-container .lever-job-title {
-  display: inline-block;
-  flex: 0 0 65%;
-  color: #0c92f3;
-  text-decoration: underline;
-  margin-bottom: 0.2em;
-}
-#lever-jobs-container .lever-job-title:hover {
-  color: #0068b3;
-}
-#lever-jobs-container .lever-job-title:active {
-  color: #003459;
-}
-#lever-jobs-container .lever-job-tag {
-  display: inline-block;
-  color: rgba(44,46,47,0.5);
-  flex: 0 0 35%;
-}
-@media (max-width: 767px) {
-  #lever-jobs-container .lever-job-tag,
-  #lever-jobs-container .lever-job-title {
-    flex: 0 0 100%;
-  }
-  #lever-jobs-container .lever-job {
-    flex-wrap: wrap;
-  }
+
+/* Estilo para las etiquetas de los trabajos */
+.lever-job-tag {
+    font-size: 0.9em; /* Smaller font size */
+    color: rgba(44,46,47,0.6); /* Slightly darker */
+    display: inline-block;
+    margin-top: 5px; /* Space above tags */
 }
